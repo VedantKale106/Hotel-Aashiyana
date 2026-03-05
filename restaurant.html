@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Aashiyana Pure Veg Restaurant. Enjoy delicious, hygienic, and authentic Maharashtrian and North Indian cuisine in Junnar.">
+    <title>Cuisine & Menu | Hotel Aashiyana Pure Veg Restaurant</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        body: ['"Lora"', 'serif'],
+                        ui: ['"Montserrat"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1a3a32',
+                        accent: '#c49a6c',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Mobile Menu Toggle Logic */
+        #menu-toggle:checked ~ nav {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-[#faf9f6] text-slate-900 font-body">
+
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex flex-col">
+                <span class="font-display text-2xl md:text-3xl font-bold text-primary leading-none tracking-tight">Hotel Aashiyana</span>
+                <span class="font-ui text-[8px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-accent font-bold mt-1">Lodging & Fine Dining</span>
+            </a>
+            
+            <label for="menu-toggle" class="md:hidden cursor-pointer text-primary text-2xl">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" id="menu-toggle" class="hidden">
+
+            <nav class="hidden md:block absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none">
+                <ul class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-10 font-ui text-xs font-bold uppercase tracking-widest text-slate-600 p-6 md:p-0">
+                    <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                    <li><a href="about.html" class="hover:text-primary transition">About</a></li>
+                    <li><a href="rooms.html" class="hover:text-primary transition">Suites</a></li>
+                    <li><a href="restaurant.html" class="text-primary border-b-2 border-accent pb-1">Cuisine</a></li>
+                    <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-white overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=90" alt="Elegant Restaurant Seating" class="absolute inset-0 w-full h-full object-cover brightness-[0.3]">
+            <div class="relative z-10 text-center px-6">
+                <span class="font-ui text-accent text-[10px] md:text-xs uppercase tracking-[0.5em] mb-4 block font-bold">Culinary Excellence</span>
+                <h1 class="font-display text-4xl md:text-8xl italic mb-6">A Taste of Tradition</h1>
+                <div class="w-16 md:w-24 h-px bg-accent mx-auto mb-6"></div>
+                <p class="font-ui text-[9px] md:text-[11px] uppercase tracking-[0.3em] text-slate-300">Junnar's Premier Pure Vegetarian Destination</p>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+                <div class="w-full lg:w-1/2">
+                    <span class="font-ui text-accent text-xs uppercase tracking-widest font-bold mb-4 block">Our Philosophy</span>
+                    <h2 class="font-display text-4xl md:text-5xl text-primary mb-6 md:mb-8 leading-tight">Soulful Food, <br>Sustainably Sourced</h2>
+                    <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8">
+                        At Hotel Aashiyana, we believe that pure vegetarian food is an art form. Every spice is ground in-house, and every vegetable is hand-picked from local farmers in the Junnar valley to ensure a "Farm-to-Fork" experience.
+                    </p>
+                    
+                    <div class="bg-primary p-6 md:p-8 rounded-sm text-white flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 shadow-2xl text-center sm:text-left">
+                        <i class="fa-solid fa-leaf text-3xl text-accent"></i>
+                        <div>
+                            <h4 class="font-display text-2xl italic">100% Satvik Standards</h4>
+                            <p class="text-slate-400 text-sm mt-1">Maintaining the highest hygiene and spiritual purity in every meal.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Gourmet Indian Meal" class="w-full h-[350px] md:h-[500px] object-cover rounded-sm shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 w-40 h-40 border-4 border-white hidden md:block lg:-left-10 lg:-bottom-10 lg:w-64 lg:h-64 lg:border-8">
+                        <img src="https://images.unsplash.com/photo-1601050638917-3d906bc73560?auto=format&fit=crop&w=400&q=80" alt="Fresh Ingredients" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-[#f4f1ea] border-y border-slate-200">
+            <div class="container mx-auto px-6 max-w-6xl">
+                <div class="text-center mb-12 md:mb-20">
+                    <h2 class="font-display text-4xl md:text-5xl text-primary mb-4 italic">The Tasting Menu</h2>
+                    <p class="font-ui text-[9px] md:text-[10px] uppercase tracking-[0.4em] text-accent font-bold">Curated by our Master Chefs</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-x-16 lg:gap-x-24 gap-y-12">
+                    <div class="space-y-12">
+                        <div>
+                            <h3 class="font-display text-2xl md:text-3xl text-primary border-b border-accent/30 pb-4 mb-6 md:mb-8 italic">Morning Heritage</h3>
+                            <div class="space-y-6 md:space-y-8">
+                                <div class="group">
+                                    <div class="flex justify-between items-baseline">
+                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Misal Pav Special</h4>
+                                        <span class="font-ui font-bold text-primary ml-4">₹120</span>
+                                    </div>
+                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">Sprouted bean curry topped with farsan, served with buttery pav.</p>
+                                </div>
+                                <div class="group">
+                                    <div class="flex justify-between items-baseline">
+                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Traditional Poha</h4>
+                                        <span class="font-ui font-bold text-primary ml-4">₹80</span>
+                                    </div>
+                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">Lightly sautéed flattened rice with peanuts and local spices.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-display text-2xl md:text-3xl text-primary border-b border-accent/30 pb-4 mb-6 md:mb-8 italic">Maharashtrian Thalis</h3>
+                            <div class="space-y-6">
+                                <div class="group">
+                                    <div class="flex justify-between items-baseline">
+                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Aashiyana Royal Thali</h4>
+                                        <span class="font-ui font-bold text-primary ml-4">₹280</span>
+                                    </div>
+                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">Includes 3 seasonal veg, dal tadka, amti, bhakri, and shrikhand.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-12">
+                        <div>
+                            <h3 class="font-display text-2xl md:text-3xl text-primary border-b border-accent/30 pb-4 mb-6 md:mb-8 italic">North Indian Delights</h3>
+                            <div class="space-y-6 md:space-y-8">
+                                <div class="group">
+                                    <div class="flex justify-between items-baseline">
+                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Paneer Peshawari</h4>
+                                        <span class="font-ui font-bold text-primary ml-4">₹240</span>
+                                    </div>
+                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">Soft cubes of paneer cooked in a slow-simmered cashew gravy.</p>
+                                </div>
+                                <div class="group">
+                                    <div class="flex justify-between items-baseline">
+                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Veg Diwani Handi</h4>
+                                        <span class="font-ui font-bold text-primary ml-4">₹210</span>
+                                    </div>
+                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">A medley of garden vegetables cooked in a traditional clay pot.</p>
+                                </div>
+                                <div class="group">
+                                    <div class="flex justify-between items-baseline">
+                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Dal Baati Churma</h4>
+                                        <span class="font-ui font-bold text-primary ml-4">₹260</span>
+                                    </div>
+                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">Our weekend special—authentic Rajasthani heritage.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 md:mt-20 overflow-hidden rounded-sm shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1200&q=80" alt="Luxurious Dining Table" class="w-full h-48 md:h-80 object-cover">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-white pt-16 pb-10">
+        <div class="container mx-auto px-6 text-center">
+            <h4 class="font-display text-3xl md:text-4xl mb-6 italic text-accent">Hotel Aashiyana</h4>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-12 mb-10">
+                <div class="text-center">
+                    <p class="font-ui text-[9px] md:text-[10px] uppercase tracking-widest text-slate-400">Breakfast</p>
+                    <p class="text-sm">7:30 AM - 10:30 AM</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-ui text-[9px] md:text-[10px] uppercase tracking-widest text-slate-400">Lunch & Dinner</p>
+                    <p class="text-sm">12:30 PM - 11:00 PM</p>
+                </div>
+            </div>
+            <div class="text-[9px] md:text-[10px] font-ui uppercase tracking-widest text-slate-500 border-t border-white/5 pt-8">
+                &copy; 2026 Hotel Aashiyana Restaurant • Crafted for the Connoisseur.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

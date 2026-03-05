@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Aashiyana Lodging & Pure Veg Restaurant in Junnar. Premium stay near Shivneri Fort.">
+    <title>Hotel Aashiyana | Luxury Lodging & Pure Veg Dining</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        body: ['"Lora"', 'serif'],
+                        ui: ['"Montserrat"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1a3a32',
+                        accent: '#c49a6c',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(26, 58, 50, 0.4), rgba(26, 58, 50, 0.8));
+        }
+        /* Mobile Menu Toggle Logic */
+        #menu-toggle:checked ~ nav {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-[#faf9f6] text-slate-900 font-body">
+
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex flex-col">
+                <span class="font-display text-2xl md:text-3xl font-bold text-primary leading-none tracking-tight">Hotel Aashiyana</span>
+                <span class="font-ui text-[8px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-accent font-bold mt-1">Lodging & Fine Dining</span>
+            </a>
+            
+            <label for="menu-toggle" class="md:hidden cursor-pointer text-primary text-2xl">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" id="menu-toggle" class="hidden">
+
+            <nav class="hidden md:block absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none">
+                <ul class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-10 font-ui text-xs font-bold uppercase tracking-widest text-slate-600 p-6 md:p-0">
+                    <li><a href="index.html" class="text-primary hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors">About</a></li>
+                    <li><a href="rooms.html" class="hover:text-accent transition-colors">Suites</a></li>
+                    <li><a href="restaurant.html" class="hover:text-accent transition-colors">Cuisine</a></li>
+                    <li class="pt-4 md:pt-0 w-full md:w-auto text-center">
+                        <a href="booking.html" class="block bg-primary text-white px-8 py-3 rounded-sm hover:bg-accent transition-colors duration-500 shadow-lg">Reserve</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-[90vh] md:h-screen flex items-center justify-center overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1920&q=90" alt="Resort View" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+            
+            <div class="relative text-center px-6 max-w-4xl">
+                <span class="font-ui text-white text-[10px] md:text-xs uppercase tracking-[0.5em] mb-4 md:mb-6 block font-bold">Tradition Meets Luxury</span>
+                <h1 class="font-display text-4xl md:text-8xl text-white italic mb-8 leading-tight">A Sanctuary for the <br class="hidden md:block">Modern Traveler</h1>
+                <div class="flex justify-center">
+                    <a href="#explore" class="font-ui bg-accent text-white py-4 px-10 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-all duration-300">Discover More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="explore" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <span class="font-ui text-accent text-xs uppercase tracking-widest font-bold mb-4 block">Since 2012</span>
+                    <h2 class="font-display text-4xl md:text-5xl text-primary mb-6 leading-tight">The Heritage of Junnar <br class="hidden md:block">at Your Doorstep</h2>
+                    <p class="text-slate-600 leading-relaxed mb-8 text-base md:text-lg">
+                        Nestled in the shadow of the legendary <strong>Shivneri Fort</strong>, Hotel Aashiyana offers more than just a place to sleep. We provide a cultural gateway to the history of Maharashtra, complemented by the finest pure vegetarian culinary experience in the region.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 md:gap-8 font-ui">
+                        <div>
+                            <span class="block text-xl md:text-2xl font-bold text-primary uppercase tracking-tighter">01.</span>
+                            <span class="text-[9px] md:text-[10px] uppercase font-bold text-accent tracking-widest">Premium Suites</span>
+                        </div>
+                        <div>
+                            <span class="block text-xl md:text-2xl font-bold text-primary uppercase tracking-tighter">02.</span>
+                            <span class="text-[9px] md:text-[10px] uppercase font-bold text-accent tracking-widest">Farm-to-Table</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative order-1 md:order-2">
+                    <img src="https://images.unsplash.com/photo-1590059132718-56829df18bca?auto=format&fit=crop&w=1000&q=80" alt="Local Heritage" class="rounded shadow-xl w-full">
+                    <div class="absolute -bottom-6 -right-4 md:-bottom-8 md:-left-8 bg-primary p-6 md:p-8">
+                        <p class="font-display text-xl md:text-2xl text-accent italic">Authentic Hospitality</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-[#f4f1ea]">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-6 md:gap-0 shadow-2xl">
+                    <div class="bg-white p-8 md:p-12 group hover:bg-primary transition-all duration-500 cursor-pointer">
+                        <div class="mb-6 md:mb-8 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Lodging" class="w-full h-56 md:h-64 object-cover transform group-hover:scale-105 transition duration-700">
+                        </div>
+                        <h3 class="font-display text-2xl md:text-3xl mb-4 group-hover:text-white transition">The Lodging</h3>
+                        <p class="text-slate-500 group-hover:text-slate-300 transition text-sm leading-loose">Spacious, air-conditioned rooms designed with minimalist elegance and traditional touches.</p>
+                    </div>
+                    <div class="bg-white p-8 md:p-12 border-t md:border-t-0 md:border-l border-slate-100 group hover:bg-primary transition-all duration-500 cursor-pointer">
+                        <div class="mb-6 md:mb-8 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Pure Veg Dining" class="w-full h-56 md:h-64 object-cover transform group-hover:scale-105 transition duration-700">
+                        </div>
+                        <h3 class="font-display text-2xl md:text-3xl mb-4 group-hover:text-white transition">The Kitchen</h3>
+                        <p class="text-slate-500 group-hover:text-slate-300 transition text-sm leading-loose">A celebration of purity. Our 100% vegetarian menu features seasonal local produce and spice blends.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 border-b border-white/10 pb-12">
+            <div>
+                <h4 class="font-display text-3xl mb-6 italic text-accent">Hotel Aashiyana</h4>
+                <p class="font-ui text-[10px] md:text-[11px] uppercase tracking-[0.2em] md:tracking-[0.3em] leading-relaxed text-slate-400">
+                    Om Shakti Nagar, Near Shivneri Fort,<br>
+                    Junnar, Maharashtra 410502
+                </p>
+            </div>
+            <div class="font-ui text-[10px] md:text-[11px] uppercase tracking-[0.2em] md:tracking-[0.3em] space-y-3">
+                <p class="text-accent font-bold">Contact Information</p>
+                <p>Phone: 098905 82483</p>
+                <p>Email: stay@hotelaashiyana.com</p>
+            </div>
+        
+        </div>
+        <div class="container mx-auto px-6 mt-8 flex flex-col md:flex-row justify-between items-center text-[9px] md:text-[10px] font-ui uppercase tracking-widest text-slate-500">
+            <p>&copy; 2026 Hotel Aashiyana. All Rights Reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition">Instagram</a>
+                <a href="#" class="hover:text-white transition">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
