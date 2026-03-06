@@ -31,7 +31,6 @@
         }
     </script>
     <style>
-        /* Mobile Menu Toggle Logic */
         #menu-toggle:checked ~ nav {
             display: block;
         }
@@ -64,139 +63,100 @@
     </header>
 
     <main>
-        <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-white overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=90" alt="Elegant Restaurant Seating" class="absolute inset-0 w-full h-full object-cover brightness-[0.3]">
+        <section class="relative h-[50vh] flex items-center justify-center text-white overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=90" alt="Restaurant Interior Hero" class="absolute inset-0 w-full h-full object-cover brightness-[0.3]">
             <div class="relative z-10 text-center px-6">
-                <span class="font-ui text-accent text-[10px] md:text-xs uppercase tracking-[0.5em] mb-4 block font-bold">Culinary Excellence</span>
-                <h1 class="font-display text-4xl md:text-8xl italic mb-6">A Taste of Tradition</h1>
-                <div class="w-16 md:w-24 h-px bg-accent mx-auto mb-6"></div>
-                <p class="font-ui text-[9px] md:text-[11px] uppercase tracking-[0.3em] text-slate-300">Junnar's Premier Pure Vegetarian Destination</p>
+                <span class="font-ui text-accent text-[10px] md:text-xs uppercase tracking-[0.5em] mb-4 block font-bold">Pure Vegetarian</span>
+                <h1 class="font-display text-4xl md:text-7xl italic mb-4">The Aashiyana Menu</h1>
+                <p class="font-ui text-[9px] md:text-[11px] uppercase tracking-[0.3em] text-slate-300">Authentic Flavors of Junnar</p>
             </div>
         </section>
 
-        <section class="py-16 md:py-24 container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-                <div class="w-full lg:w-1/2">
-                    <span class="font-ui text-accent text-xs uppercase tracking-widest font-bold mb-4 block">Our Philosophy</span>
-                    <h2 class="font-display text-4xl md:text-5xl text-primary mb-6 md:mb-8 leading-tight">Soulful Food, <br>Sustainably Sourced</h2>
-                    <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8">
-                        At Hotel Aashiyana, we believe that pure vegetarian food is an art form. Every spice is ground in-house, and every vegetable is hand-picked from local farmers in the Junnar valley to ensure a "Farm-to-Fork" experience.
-                    </p>
-                    
-                    <div class="bg-primary p-6 md:p-8 rounded-sm text-white flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 shadow-2xl text-center sm:text-left">
-                        <i class="fa-solid fa-leaf text-3xl text-accent"></i>
-                        <div>
-                            <h4 class="font-display text-2xl italic">100% Satvik Standards</h4>
-                            <p class="text-slate-400 text-sm mt-1">Maintaining the highest hygiene and spiritual purity in every meal.</p>
-                        </div>
-                    </div>
-                </div>
+        <section class="py-12 md:py-20 bg-[#f4f1ea]">
+            <div class="container mx-auto px-6">
                 
-                <div class="w-full lg:w-1/2 relative">
-                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Gourmet Indian Meal" class="w-full h-[350px] md:h-[500px] object-cover rounded-sm shadow-2xl">
-                    <div class="absolute -bottom-6 -right-6 w-40 h-40 border-4 border-white hidden md:block lg:-left-10 lg:-bottom-10 lg:w-64 lg:h-64 lg:border-8">
-                        <img src="https://images.unsplash.com/photo-1601050638917-3d906bc73560?auto=format&fit=crop&w=400&q=80" alt="Fresh Ingredients" class="w-full h-full object-cover">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 md:py-24 bg-[#f4f1ea] border-y border-slate-200">
-            <div class="container mx-auto px-6 max-w-6xl">
-                <div class="text-center mb-12 md:mb-20">
-                    <h2 class="font-display text-4xl md:text-5xl text-primary mb-4 italic">The Tasting Menu</h2>
-                    <p class="font-ui text-[9px] md:text-[10px] uppercase tracking-[0.4em] text-accent font-bold">Curated by our Master Chefs</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-x-16 lg:gap-x-24 gap-y-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    
                     <div class="space-y-12">
                         <div>
-                            <h3 class="font-display text-2xl md:text-3xl text-primary border-b border-accent/30 pb-4 mb-6 md:mb-8 italic">Morning Heritage</h3>
-                            <div class="space-y-6 md:space-y-8">
-                                <div class="group">
-                                    <div class="flex justify-between items-baseline">
-                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Misal Pav Special</h4>
-                                        <span class="font-ui font-bold text-primary ml-4">₹120</span>
-                                    </div>
-                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">Sprouted bean curry topped with farsan, served with buttery pav.</p>
-                                </div>
-                                <div class="group">
-                                    <div class="flex justify-between items-baseline">
-                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Traditional Poha</h4>
-                                        <span class="font-ui font-bold text-primary ml-4">₹80</span>
-                                    </div>
-                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">Lightly sautéed flattened rice with peanuts and local spices.</p>
-                                </div>
+                            <h3 class="font-display text-2xl text-primary border-b border-accent/30 pb-3 mb-6 italic">Indian Main Course</h3>
+                            <div class="space-y-3 font-ui text-[13px]">
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Hirwi Mirchi Thecha</span> <span>₹89</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Aloo Jeera</span> <span>₹99</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Green Peas / Rajma Masala</span> <span>₹156</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Chana Masala / Shev Bhaji</span> <span>₹156</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Matki / Soyabean Masala</span> <span>₹156</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Aloo Matar / Baingan Masala</span> <span>₹156</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Matar Palak</span> <span>₹156</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Bhendi Masala</span> <span>₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Dal Fry (H/F)</span> <span>₹135 / ₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Dal Tadka (H/F)</span> <span>₹144 / ₹189</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Dal Khichdi</span> <span>₹174</span></div>
                             </div>
                         </div>
 
                         <div>
-                            <h3 class="font-display text-2xl md:text-3xl text-primary border-b border-accent/30 pb-4 mb-6 md:mb-8 italic">Maharashtrian Thalis</h3>
-                            <div class="space-y-6">
-                                <div class="group">
-                                    <div class="flex justify-between items-baseline">
-                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Aashiyana Royal Thali</h4>
-                                        <span class="font-ui font-bold text-primary ml-4">₹280</span>
-                                    </div>
-                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">Includes 3 seasonal veg, dal tadka, amti, bhakri, and shrikhand.</p>
-                                </div>
+                            <h3 class="font-display text-2xl text-primary border-b border-accent/30 pb-3 mb-6 italic">Paneer & Special Veg</h3>
+                            <div class="space-y-3 font-ui text-[13px]">
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Paneer Masala / Butter Masala</span> <span>₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Paneer Tikka / Matar Paneer</span> <span>₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Mix Veg / Veg Kolhapuri</span> <span>₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Paneer Kolhapuri / Palak Paneer</span> <span>₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Kaju Paneer Masala</span> <span>₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Veg Bhuna</span> <span>₹189</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Veg Maratha / Makhanwala</span> <span>₹180</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="space-y-12">
                         <div>
-                            <h3 class="font-display text-2xl md:text-3xl text-primary border-b border-accent/30 pb-4 mb-6 md:mb-8 italic">North Indian Delights</h3>
-                            <div class="space-y-6 md:space-y-8">
-                                <div class="group">
-                                    <div class="flex justify-between items-baseline">
-                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Paneer Peshawari</h4>
-                                        <span class="font-ui font-bold text-primary ml-4">₹240</span>
-                                    </div>
-                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">Soft cubes of paneer cooked in a slow-simmered cashew gravy.</p>
-                                </div>
-                                <div class="group">
-                                    <div class="flex justify-between items-baseline">
-                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Veg Diwani Handi</h4>
-                                        <span class="font-ui font-bold text-primary ml-4">₹210</span>
-                                    </div>
-                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">A medley of garden vegetables cooked in a traditional clay pot.</p>
-                                </div>
-                                <div class="group">
-                                    <div class="flex justify-between items-baseline">
-                                        <h4 class="font-ui text-xs md:text-sm font-bold uppercase tracking-widest group-hover:text-accent transition">Dal Baati Churma</h4>
-                                        <span class="font-ui font-bold text-primary ml-4">₹260</span>
-                                    </div>
-                                    <p class="text-[11px] md:text-xs text-slate-500 italic mt-1">Our weekend special—authentic Rajasthani heritage.</p>
-                                </div>
+                            <h3 class="font-display text-2xl text-primary border-b border-accent/30 pb-3 mb-6 italic">Chinese & Soups</h3>
+                            <div class="space-y-3 font-ui text-[13px]">
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Sweet Corn / Tomato Soup</span> <span>₹120 / ₹135</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Manchow Soup</span> <span>₹135</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Paneer / Soyabean Chilli</span> <span>₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Veg Manchurian / Fried Rice</span> <span>₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Paneer / Mushroom Fried Rice</span> <span>₹189 / ₹198</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Veg / Schezwan Noodles</span> <span>₹180 / ₹198</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Paneer Crispy / Veg 65</span> <span>₹279</span></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-display text-2xl text-primary border-b border-accent/30 pb-3 mb-6 italic">Rice & Biryani</h3>
+                            <div class="space-y-3 font-ui text-[13px]">
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Plain Rice (H/F)</span> <span>₹81 / ₹174</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Jeera Rice (H/F)</span> <span>₹99 / ₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Curd Rice</span> <span>₹180</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Special Veg Pulao</span> <span>₹234</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1 font-bold text-primary"><span>Aashiyana Spl. Biryani</span> <span>₹270</span></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-display text-2xl text-primary border-b border-accent/30 pb-3 mb-6 italic">Roti & Breads</h3>
+                            <div class="space-y-3 font-ui text-[13px]">
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Roti / Chapati</span> <span>₹18</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Plain Naan / Paratha</span> <span>₹36</span></div>
+                                <div class="flex justify-between border-b border-slate-200 pb-1"><span>Butter Naan / Paratha</span> <span>₹45</span></div>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
-                <div class="mt-12 md:mt-20 overflow-hidden rounded-sm shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1200&q=80" alt="Luxurious Dining Table" class="w-full h-48 md:h-80 object-cover">
-                </div>
+                
             </div>
         </section>
     </main>
 
-    <footer class="bg-primary text-white pt-16 pb-10">
-        <div class="container mx-auto px-6 text-center">
-            <h4 class="font-display text-3xl md:text-4xl mb-6 italic text-accent">Hotel Aashiyana</h4>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-12 mb-10">
-                <div class="text-center">
-                    <p class="font-ui text-[9px] md:text-[10px] uppercase tracking-widest text-slate-400">Breakfast</p>
-                    <p class="text-sm">7:30 AM - 10:30 AM</p>
-                </div>
-                <div class="text-center">
-                    <p class="font-ui text-[9px] md:text-[10px] uppercase tracking-widest text-slate-400">Lunch & Dinner</p>
-                    <p class="text-sm">12:30 PM - 11:00 PM</p>
-                </div>
-            </div>
-            <div class="text-[9px] md:text-[10px] font-ui uppercase tracking-widest text-slate-500 border-t border-white/5 pt-8">
-                &copy; 2026 Hotel Aashiyana Restaurant • Crafted for the Connoisseur.
-            </div>
+    <footer class="bg-primary text-white pt-12 pb-8">
+        <div class="container mx-auto px-6 text-center border-t border-white/5 pt-8">
+            <h4 class="font-display text-2xl mb-4 italic text-accent">Hotel Aashiyana</h4>
+            <p class="font-ui text-[9px] uppercase tracking-widest text-slate-500">
+                &copy; 2026 Hotel Aashiyana Restaurant • Pure Veg Heritage.
+            </p>
         </div>
     </footer>
 

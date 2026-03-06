@@ -32,9 +32,13 @@
         }
     </script>
     <style>
-        /* Mobile Menu Toggle Logic */
         #menu-toggle:checked ~ nav {
             display: block;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#c49a6c 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            opacity: 0.1;
         }
     </style>
 </head>
@@ -64,62 +68,70 @@
         </div>
     </header>
 
-    <main class="flex-grow flex flex-col items-center py-10 md:py-16 px-4 md:px-6">
-        <div class="text-center mb-8 md:mb-12">
-            <span class="font-ui text-accent text-[10px] md:text-xs uppercase tracking-[0.4em] mb-4 block font-bold">Reservation Desk</span>
-            <h1 class="font-display text-4xl md:text-6xl text-primary italic leading-tight">Check Availability</h1>
-            <div class="w-16 md:w-20 h-px bg-accent mx-auto mt-4 md:mt-6"></div>
+    <main class="flex-grow flex flex-col items-center py-12 md:py-20 px-4 md:px-6 relative">
+        <div class="absolute inset-0 bg-pattern -z-10"></div>
+
+        <div class="text-center mb-10 md:mb-16">
+            <span class="font-ui text-accent text-[10px] md:text-xs uppercase tracking-[0.6em] mb-4 block font-bold">Reservation Desk</span>
+            <h1 class="font-display text-4xl md:text-7xl text-primary italic leading-tight">Check Availability</h1>
+            <p class="text-slate-500 mt-4 font-ui text-[10px] md:text-xs uppercase tracking-[0.2em]">Secure your stay in the heart of Junnar</p>
         </div>
 
-        <div class="bg-white p-6 md:p-12 shadow-2xl w-full max-w-2xl border-t-8 border-primary rounded-sm relative">
-            <div class="absolute -top-4 -right-4 bg-accent text-white p-4 shadow-lg hidden md:block">
-                <i class="fa-solid fa-hotel text-2xl"></i>
+        <div class="bg-white p-8 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.1)] w-full max-w-2xl border-t-[12px] border-primary rounded-sm relative">
+            <div class="absolute -top-6 -right-6 bg-accent text-white p-5 shadow-2xl hidden md:flex items-center justify-center rounded-sm">
+                <i class="fa-solid fa-key text-2xl"></i>
             </div>
             
-            <p class="text-slate-500 mb-8 md:mb-10 font-ui text-[9px] md:text-[11px] uppercase tracking-widest text-center">Fill in your details for a custom quote</p>
-            
-            <form id="bookingForm" class="space-y-6 md:space-y-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                    <div class="relative">
-                        <label class="font-ui text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Check-in Date</label>
-                        <input type="date" id="checkin" class="w-full border-b border-slate-200 py-3 focus:outline-none focus:border-accent bg-transparent italic text-sm" required>
+            <form id="bookingForm" class="space-y-8 md:space-y-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <div class="relative group">
+                        <label class="font-ui text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-3 group-focus-within:text-accent transition-colors">Check-in Date</label>
+                        <input type="date" id="checkin" class="w-full border-b-2 border-slate-100 py-3 focus:outline-none focus:border-accent bg-transparent italic text-sm text-primary transition-all" required>
                     </div>
-                    <div class="relative">
-                        <label class="font-ui text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Check-out Date</label>
-                        <input type="date" id="checkout" class="w-full border-b border-slate-200 py-3 focus:outline-none focus:border-accent bg-transparent italic text-sm" required>
+                    <div class="relative group">
+                        <label class="font-ui text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-3 group-focus-within:text-accent transition-colors">Check-out Date</label>
+                        <input type="date" id="checkout" class="w-full border-b-2 border-slate-100 py-3 focus:outline-none focus:border-accent bg-transparent italic text-sm text-primary transition-all" required>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                     <div>
-                        <label class="font-ui text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Total Guests</label>
-                        <select id="guests" class="w-full border-b border-slate-200 py-3 focus:outline-none focus:border-accent bg-transparent italic text-sm">
+                        <label class="font-ui text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-3">Total Guests</label>
+                        <select id="guests" class="w-full border-b-2 border-slate-100 py-3 focus:outline-none focus:border-accent bg-transparent italic text-sm text-primary appearance-none cursor-pointer">
                             <option value="1 Adult">1 Adult</option>
                             <option value="2 Adults" selected>2 Adults</option>
                             <option value="3 Adults">3 Adults</option>
-                            <option value="4+ Adults">4+ Adults / Group</option>
+                            <option value="4+ Adults / Group">4+ Adults / Group Booking</option>
                         </select>
                     </div>
                     <div>
-                        <label class="font-ui text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Room Preference</label>
-                        <select id="room_type" class="w-full border-b border-slate-200 py-3 focus:outline-none focus:border-accent bg-transparent italic text-sm">
-                            <option value="Standard Non-AC">Standard Non-AC Room</option>
-                            <option value="Deluxe AC Suite">Deluxe AC Suite</option>
+                        <label class="font-ui text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-3">Lodging Type</label>
+                        <select id="room_type" class="w-full border-b-2 border-slate-100 py-3 focus:outline-none focus:border-accent bg-transparent italic text-sm text-primary appearance-none cursor-pointer">
+                            <option value="Standard Executive (Non-AC)">Standard Executive (Non-AC)</option>
+                            <option value="Deluxe Suite (Non-AC)">Deluxe Suite (Non-AC)</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="border-t border-slate-100 pt-8 md:pt-10 mt-8 md:mt-10 text-center">
-                    <p class="text-xs md:text-sm text-slate-500 mb-6 font-body italic">Click below to send your request directly to our manager via WhatsApp.</p>
+                <div class="pt-2 group">
+                    <label class="font-ui text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-3 group-focus-within:text-accent transition-colors">Your Full Name</label>
+                    <input type="text" id="guest_name" placeholder="Enter your name" class="w-full border-b-2 border-slate-100 py-3 focus:outline-none focus:border-accent bg-transparent italic text-sm text-primary transition-all" required>
+                </div>
+
+                <div class="border-t border-slate-50 pt-10 md:pt-12 text-center">
+                    <p class="text-[11px] md:text-xs text-slate-400 mb-8 font-body italic">Click below to send a formatted request directly to our reservation manager.</p>
                     
-                    <div class="flex flex-col gap-4">
-                        <button type="button" onclick="sendToWhatsApp()" class="flex items-center justify-center space-x-3 w-full bg-whatsapp text-white py-4 md:py-5 rounded-sm font-ui text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] hover:brightness-110 transition-all shadow-xl">
-                            <i class="fa-brands fa-whatsapp text-xl"></i>
-                            <span>Send WhatsApp Request</span>
+                    <div class="flex flex-col gap-6">
+                        <button type="button" onclick="sendToWhatsApp()" class="group relative overflow-hidden bg-whatsapp text-white py-5 px-8 rounded-sm font-ui text-[11px] md:text-[13px] font-bold uppercase tracking-[0.3em] hover:shadow-[0_15px_30px_rgba(37,211,102,0.3)] transition-all duration-500">
+                            <span class="relative z-10 flex items-center justify-center space-x-3">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                <span>Send Detailed Inquiry</span>
+                            </span>
                         </button>
                         
-                        <a href="tel:09890582483" class="font-ui text-[10px] font-bold uppercase tracking-widest text-primary hover:text-accent transition pt-2">
-                            Or Call Directly: 098905 82483
+                        <a href="tel:09890582483" class="inline-flex items-center justify-center space-x-2 font-ui text-[10px] font-bold uppercase tracking-widest text-primary hover:text-accent transition group">
+                            <i class="fa-solid fa-phone-flip text-[10px] group-hover:shake"></i>
+                            <span>Direct Helpline: 098905 82483</span>
                         </a>
                     </div>
                 </div>
@@ -127,36 +139,42 @@
         </div>
     </main>
 
-    <footer class="bg-primary text-white pt-10 pb-8 mt-auto">
-        <div class="container mx-auto px-6 text-center border-t border-white/5 pt-8">
-            <div class="text-[9px] md:text-[10px] font-ui uppercase tracking-widest text-slate-500">
-                &copy; 2026 Hotel Aashiyana Lodging. Secure Booking System.
+    <footer class="bg-primary text-white pt-12 pb-10 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-[9px] md:text-[10px] font-ui uppercase tracking-widest text-slate-500 opacity-60">
+                &copy; 2026 Hotel Aashiyana Lodging & Restaurant • Junnar Heritage
             </div>
         </div>
     </footer>
 
     <script>
         function sendToWhatsApp() {
+            const guestName = document.getElementById('guest_name').value;
             const checkin = document.getElementById('checkin').value;
             const checkout = document.getElementById('checkout').value;
             const guests = document.getElementById('guests').value;
             const roomType = document.getElementById('room_type').value;
             
-            if(!checkin || !checkout) {
-                alert("Please select both Check-in and Check-out dates.");
+            if(!guestName || !checkin || !checkout) {
+                alert("Please fill in your name and stay dates to proceed.");
                 return;
             }
 
             const phoneNumber = "919890582483";
 
-            const message = `*Booking Inquiry - Hotel Aashiyana*%0A` +
-                            `------------------------------------%0A` +
-                            `🏨 *Room Type:* ${roomType}%0A` +
-                            `📅 *Check-in:* ${checkin}%0A` +
-                            `📅 *Check-out:* ${checkout}%0A` +
-                            `👥 *Guests:* ${guests}%0A` +
-                            `------------------------------------%0A` +
-                            `Hello, I would like to check the availability and rates for the dates mentioned above. Please confirm at your earliest. Thank you!`;
+            // Attractive descriptive message for the manager
+            const message = 
+                `✨ *HOTEL AASHIYANA - BOOKING REQUEST* ✨%0A%0A` +
+                `*Guest Details:*%0A` +
+                `👤 *Name:* ${guestName}%0A` +
+                `👥 *Occupancy:* ${guests}%0A%0A` +
+                `*Stay Plan:*%0A` +
+                `🏨 *Room:* ${roomType}%0A` +
+                `📥 *Check-in:* ${checkin}%0A` +
+                `📤 *Check-out:* ${checkout}%0A%0A` +
+                `------------------------------------%0A` +
+                `_Hello Team Aashiyana, I would like to check the availability for the above dates. Please let me know the best rates and confirmed availability._%0A%0A` +
+                `*Thank you!*`;
 
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
             window.open(whatsappURL, '_blank');
