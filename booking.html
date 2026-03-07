@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Check availability and book your stay at Hotel Aashiyana, Junnar. Instant WhatsApp booking for Deluxe and Standard rooms.">
+    <meta name="description" content="Check availability and book your stay at Hotel Aashiyana, Junnar. Instant WhatsApp booking for Deluxe, Standard rooms, and Dormitories.">
     <title>Reservations | Hotel Aashiyana Junnar</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +48,7 @@
         <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex flex-col">
                 <span class="font-display text-2xl md:text-3xl font-bold text-primary leading-none tracking-tight">Hotel Aashiyana</span>
-                <span class="font-ui text-[8px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-accent font-bold mt-1">Lodging & Fine Dining</span>
+                <span class="font-ui text-[8px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-accent font-bold mt-1">Hotel & Restaurant</span>
             </a>
             
             <label for="menu-toggle" class="md:hidden cursor-pointer text-primary text-2xl">
@@ -60,8 +60,9 @@
                 <ul class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-10 font-ui text-xs font-bold uppercase tracking-widest text-slate-600 p-6 md:p-0">
                     <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
                     <li><a href="about.html" class="hover:text-primary transition">About</a></li>
-                    <li><a href="rooms.html" class="hover:text-primary transition">Suites</a></li>
-                    <li><a href="restaurant.html" class="hover:text-primary transition">Cuisine</a></li>
+                    <li><a href="rooms.html" class="hover:text-primary transition">Rooms</a></li>
+                    <li><a href="restaurant.html" class="hover:text-primary transition">Restaurant</a></li>
+                    <li><a href="gallery.html" class="hover:text-primary transition">Gallery</a></li>
                     <li><a href="contact.html" class="hover:text-primary transition">Contact</a></li>
                 </ul>
             </nav>
@@ -101,14 +102,18 @@
                             <option value="1 Adult">1 Adult</option>
                             <option value="2 Adults" selected>2 Adults</option>
                             <option value="3 Adults">3 Adults</option>
-                            <option value="4+ Adults / Group">4+ Adults / Group Booking</option>
+                            <option value="4 Adults">4 Adults</option>
+                            <option value="5 Adults">5 Adults</option>
+                            <option value="6 Adults">6 Adults</option>
+                            <option value="Large Group / Dormitory">Large Group / Dormitory</option>
                         </select>
                     </div>
                     <div>
-                        <label class="font-ui text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-3">Lodging Type</label>
+                        <label class="font-ui text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-3">Room Type</label>
                         <select id="room_type" class="w-full border-b-2 border-slate-100 py-3 focus:outline-none focus:border-accent bg-transparent italic text-sm text-primary appearance-none cursor-pointer">
-                            <option value="Standard Executive (Non-AC)">Standard Executive (Non-AC)</option>
-                            <option value="Deluxe Suite (Non-AC)">Deluxe Suite (Non-AC)</option>
+                            <option value="Standard Room (Non-AC)">Standard Room (Non-AC)</option>
+                            <option value="Deluxe Room (Non-AC)">Deluxe Room (Non-AC)</option>
+                            <option value="Dormitory Group Stay">Dormitory Stay</option>
                         </select>
                     </div>
                 </div>
@@ -130,7 +135,7 @@
                         </button>
                         
                         <a href="tel:09890582483" class="inline-flex items-center justify-center space-x-2 font-ui text-[10px] font-bold uppercase tracking-widest text-primary hover:text-accent transition group">
-                            <i class="fa-solid fa-phone-flip text-[10px] group-hover:shake"></i>
+                            <i class="fa-solid fa-phone-flip text-[10px]"></i>
                             <span>Direct Helpline: 098905 82483</span>
                         </a>
                     </div>
@@ -142,7 +147,7 @@
     <footer class="bg-primary text-white pt-12 pb-10 mt-auto">
         <div class="container mx-auto px-6 text-center">
             <div class="text-[9px] md:text-[10px] font-ui uppercase tracking-widest text-slate-500 opacity-60">
-                &copy; 2026 Hotel Aashiyana Lodging & Restaurant • Junnar Heritage
+                &copy; 2026 Hotel Aashiyana & Restaurant • Junnar Heritage
             </div>
         </div>
     </footer>
@@ -162,7 +167,6 @@
 
             const phoneNumber = "919890582483";
 
-            // Attractive descriptive message for the manager
             const message = 
                 `✨ *HOTEL AASHIYANA - BOOKING REQUEST* ✨%0A%0A` +
                 `*Guest Details:*%0A` +
@@ -173,7 +177,7 @@
                 `📥 *Check-in:* ${checkin}%0A` +
                 `📤 *Check-out:* ${checkout}%0A%0A` +
                 `------------------------------------%0A` +
-                `_Hello Team Aashiyana, I would like to check the availability for the above dates. Please let me know the best rates and confirmed availability._%0A%0A` +
+                `_Hello Team Aashiyana, I would like to check availability for the above dates. Please let me know the rates and confirmed availability._%0A%0A` +
                 `*Thank you!*`;
 
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;

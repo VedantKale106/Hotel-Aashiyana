@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery of Hotel Aashiyana & Restaurant Junnar.">
+    <title>Gallery | Hotel Aashiyana</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        body: ['"Lora"', 'serif'],
+                        ui: ['"Montserrat"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1a3a32',
+                        accent: '#c49a6c',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #menu-toggle:checked ~ nav {
+            display: block;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 2px;
+            transition: all 0.4s ease;
+            filter: grayscale(20%);
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+            filter: grayscale(0%);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .section-header {
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-[#faf9f6] text-slate-900 font-body">
+
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex flex-col">
+                <span class="font-display text-2xl md:text-3xl font-bold text-primary leading-none tracking-tight">Hotel Aashiyana</span>
+                <span class="font-ui text-[8px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-accent font-bold mt-1">Hotel & Restaurant</span>
+            </a>
+            
+            <label for="menu-toggle" class="md:hidden cursor-pointer text-primary text-2xl">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" id="menu-toggle" class="hidden">
+
+            <nav class="hidden md:block absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none">
+                <ul class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 font-ui text-xs font-bold uppercase tracking-widest text-slate-600 p-6 md:p-0">
+                    <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors">About</a></li>
+                    <li><a href="rooms.html" class="hover:text-accent transition-colors">Rooms</a></li>
+                    <li><a href="restaurant.html" class="hover:text-accent transition-colors">Restaurant</a></li>
+                    <li><a href="gallery.html" class="text-primary font-bold">Gallery</a></li>
+                    <li class="pt-4 md:pt-0 w-full md:w-auto text-center">
+                        <a href="booking.html" class="block bg-primary text-white px-8 py-3 rounded-sm hover:bg-accent transition-colors">Reserve</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-12 md:py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h1 class="font-display text-5xl md:text-7xl text-primary italic mb-4">Gallery</h1>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <section class="mb-20">
+                <div class="section-header">
+                    <h2 class="font-display text-3xl text-primary">Restaurant and Family Rooms</h2>
+                </div>
+                <div class="gallery-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="images/Restaurant/1.png" alt="Restaurant">
+                    <img src="images/Restaurant/2.png" alt="Restaurant">
+                    <img src="images/Restaurant/3.png" alt="Restaurant">
+                </div>
+            </section>
+
+            <section class="mb-20">
+                <div class="section-header">
+                    <h2 class="font-display text-3xl text-primary">Garden Restaurant</h2>
+                </div>
+                <div class="gallery-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="images/GardenRestaurant/1.png" alt="Garden Restaurant">
+                    <img src="images/GardenRestaurant/2.png" alt="Garden Restaurant">
+                    <img src="images/GardenRestaurant/3.png" alt="Garden Restaurant">
+                    <img src="images/GardenRestaurant/4.png" alt="Garden Restaurant">
+                    <img src="images/GardenRestaurant/5.png" alt="Garden Restaurant">
+                    <img src="images/GardenRestaurant/6.png" alt="Garden Restaurant">
+
+                </div>
+            </section>
+
+        
+
+            <section class="mb-20">
+                <div class="section-header">
+                    <h2 class="font-display text-3xl text-primary">Reception</h2>
+                </div>
+                <div class="gallery-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="images/Reception/1.png" alt="Reception">
+                    <img src="images/Reception/2.png" alt="Reception">
+                </div>
+            </section>
+
+            <section class="mb-20">
+                <div class="section-header">
+                    <h2 class="font-display text-3xl text-primary">Food</h2>
+                </div>
+                <div class="gallery-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="images/Food/1.png" alt="Food">
+                    <img src="images/Food/2.png" alt="Food">
+                    <img src="images/Food/3.png" alt="Food">
+                    <img src="images/Food/4.png" alt="Food">
+                    <img src="images/Food/5.png" alt="Food">
+                    <img src="images/Food/6.png" alt="Food">
+                    <img src="images/Food/7.png" alt="Food">
+                    <img src="images/Food/8.png" alt="Food">
+                    <img src="images/Food/9.png" alt="Food">
+                    <img src="images/Food/10.png" alt="Food">
+                    <img src="images/Food/11.png" alt="Food">
+                    <img src="images/Food/12.png" alt="Food">
+                </div>
+            </section>
+
+            <section class="mb-20">
+                <div class="section-header">
+                    <h2 class="font-display text-3xl text-primary">Rooms</h2>
+                </div>
+                <div class="gallery-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="images/Standard Rooms/1.png" alt="Standard Rooms">
+                    <img src="images/Standard Rooms/2.png" alt="Standard room interior with bed, furniture, and window offering natural light">
+                    <img src="images/Standard Rooms/3.png" alt="Standard Rooms">
+                    <img src="images/Standard Rooms/4.png" alt="Standard Rooms">
+                    <img src="images/Standard Rooms/5.png" alt="Standard Rooms">
+                    <img src="images/Standard Rooms/6.png" alt="Standard Rooms">
+                    <img src="images/Standard Rooms/7.png" alt="Standard Rooms">
+                    <img src="images/Standard Rooms/8.png" alt="Standard Rooms">
+                    <img src="images/Standard Rooms/9.png" alt="Standard Rooms">
+                    <img src="images/Standard Rooms/10.png" alt="Standard Rooms">
+                    
+                </div>
+            </section>
+
+            
+
+            <section class="mb-20">
+                <div class="section-header">
+                    <h2 class="font-display text-3xl text-primary">Dormitory</h2>
+                </div>
+                <div class="gallery-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="images/Dormitory/1.png" alt="Dormitory">
+                    <img src="images/Dormitory/2.png" alt="Dormitory">
+                    <img src="images/Dormitory/3.png" alt="Dormitory">
+                </div>
+            </section>
+
+            <section class="mb-20">
+                <div class="section-header">
+                    <h2 class="font-display text-3xl text-primary">Conference Hall</h2>
+                </div>
+                <div class="gallery-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="images/Conference Hall/1.png" alt="Conference Hall">
+                </div>
+            </section>
+
+            <section class="mb-20">
+                <div class="section-header">
+                    <h2 class="font-display text-3xl text-primary">Banquet Hall</h2>
+                </div>
+                <div class="gallery-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="images/Banquet/1.png" alt="Banquet Hall">
+                </div>
+            </section>
+
+            <section class="mb-20">
+                <div class="section-header">
+                    <h2 class="font-display text-3xl text-primary">Dining Hall</h2>
+                </div>
+                <div class="gallery-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="images/Buffet/1.png" alt="Dining Hall">
+                </div>
+            </section>
+
+            
+
+        </div>
+    </main>
+
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-ui text-[10px] uppercase tracking-widest text-slate-400">&copy; 2026 Hotel Aashiyana. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
